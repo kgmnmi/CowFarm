@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -43,6 +45,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Log.d("", "onClick");
+        ImageView img = (ImageView) findViewById(R.id.cow);
+        Animation animation= AnimationUtils.loadAnimation(this, R.anim.motion);
+        animation.setFillAfter(false);   //終了後を保持
+        img.startAnimation(animation);
     }
 
 }
