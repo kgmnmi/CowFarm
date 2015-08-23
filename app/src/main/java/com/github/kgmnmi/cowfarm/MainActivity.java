@@ -2,15 +2,20 @@ package com.github.kgmnmi.cowfarm;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView CowImage = (ImageView) this.findViewById(R.id.cow);
+        CowImage.setOnClickListener(this);
     }
 
     @Override
@@ -34,4 +39,10 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onClick(View v) {
+        Log.d("", "onClick");
+    }
+
 }

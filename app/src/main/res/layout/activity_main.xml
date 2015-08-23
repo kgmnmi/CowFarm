@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:id="@+id/imageView"
+        android:id="@+id/cow"
         android:src="@drawable/eto02_ushi"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
