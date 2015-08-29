@@ -30,6 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //    }
 
 
+    MediaPlayer bgm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        MediaPlayer bgm = MediaPlayer.create(this, R.raw.game_maoudamashii_5_village10);
+        bgm = MediaPlayer.create(this, R.raw.game_maoudamashii_5_village10);
         bgm.setLooping(true);
         bgm.start();
     }
@@ -77,4 +78,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         animation.setFillAfter(false);   //終了後を保持
         img.startAnimation(animation);
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        bgm.stop();
+    }
+
 }
