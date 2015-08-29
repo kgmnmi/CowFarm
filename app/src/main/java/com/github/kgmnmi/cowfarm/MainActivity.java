@@ -9,8 +9,27 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 public class MainActivity extends Activity implements View.OnClickListener {
+
+//    public class Mammal {
+//        public void eat(Object o) {
+//            System.out.println("eat object");
+//        }
+//    }
+//
+//    public class Cow extends Mammal {
+//        public void sleep(){
+//            System.out.println("sleeping");
+//        }
+//        public void main() {
+//            this.eat("unk");
+//            this.sleep();
+//        }
+//    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +37,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         ImageView CowImage = (ImageView) this.findViewById(R.id.cow);
         CowImage.setOnClickListener(this);
+        MediaPlayer bgm = MediaPlayer.create(this, R.raw.game_maoudamashii_5_village10);
+        bgm.setLooping(true);
+        bgm.start();
     }
 
     @Override
@@ -46,9 +68,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         Log.d("", "onClick");
         ImageView img = (ImageView) findViewById(R.id.cow);
-        Animation animation= AnimationUtils.loadAnimation(this, R.anim.motion);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.motion);
         animation.setFillAfter(false);   //終了後を保持
         img.startAnimation(animation);
     }
-
 }
