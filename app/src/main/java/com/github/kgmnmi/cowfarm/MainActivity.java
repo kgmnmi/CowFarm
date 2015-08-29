@@ -37,6 +37,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         ImageView CowImage = (ImageView) this.findViewById(R.id.cow);
         CowImage.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         MediaPlayer bgm = MediaPlayer.create(this, R.raw.game_maoudamashii_5_village10);
         bgm.setLooping(true);
         bgm.start();
