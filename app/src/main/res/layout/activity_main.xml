@@ -37,10 +37,10 @@
     <ImageButton
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/button_shopping"
+        android:id="@+id/button_care"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/kaimono_kago_full"
+        android:src="@drawable/iryou_chusyaki"
         android:scaleType="fitXY"
         android:layout_alignParentEnd="true" />
 
@@ -60,5 +60,6 @@
         android:src="@drawable/unchi_character"
         android:layout_alignBottom="@+id/button_cow"
         android:layout_toEndOf="@+id/button_cow" />
+
 
 </RelativeLayout>

@@ -49,8 +49,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         buttonFeed.setOnClickListener(this);
         ImageButton buttonToilet = (ImageButton) this.findViewById(R.id.button_toilet);
         buttonToilet.setOnClickListener(this);
-        ImageButton buttonShopping = (ImageButton) this.findViewById(R.id.button_shopping);
-        buttonShopping.setOnClickListener(this);
+        ImageButton buttonCare = (ImageButton) this.findViewById(R.id.button_care);
+        buttonCare.setOnClickListener(this);
         ImageView imageEaten = (ImageView) this.findViewById(R.id.eaten_feed);
         imageEaten.setVisibility(View.INVISIBLE); //非表示処理
         ImageView flushedToilet = (ImageView) this.findViewById(R.id.flushed_toilet);
@@ -136,7 +136,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 clean.setVisibility(View.INVISIBLE);
                 break;
 
-            case R.id.button_shopping:
+            case R.id.button_care:
                 Log.d("", "onClick4");
                 break;
 
